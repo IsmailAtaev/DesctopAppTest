@@ -56,7 +56,6 @@ public class SignUpController {
 
     private void signUpNewUser() {
         DatabaseHandler dbHandler = new DatabaseHandler();
-
         String firstName = signUpName.getText();
         String lastName = signUpLastName.getText();
         String userName = login_field.getText();

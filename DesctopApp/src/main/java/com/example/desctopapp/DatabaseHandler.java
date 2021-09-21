@@ -1,9 +1,6 @@
 package com.example.desctopapp;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 
 public class DatabaseHandler extends Configs {
@@ -19,20 +16,20 @@ public class DatabaseHandler extends Configs {
         return dbConnection;
     }
 
-    public void signUpUser(User user ){
+    public void signUpUser(User user) {
         String inser = "INSERT INTO " + Const.USER_TABLE + "(" +
                 Const.USERS_FIRSTNAME + "," + Const.USERS_LASTNAME + "," +
-                Const.USERS_USERNAME + "," + Const.USERS_PASSWORD+","+
+                Const.USERS_USERNAME + "," + Const.USERS_PASSWORD + "," +
                 Const.USERS_LOCATION + "," + Const.USERS_GENDER + ")" +
                 "VALUES(?,?,?,?,?,?)";
         try {
-        PreparedStatement prSt = getDbConnection().prepareStatement(inser);
-        prSt.setString(1,user.getFirstName());
-        prSt.setString(2,user.getFirstName());
-        prSt.setString(3,user.getUserName());
-        prSt.setString(4,user.getPassword());
-        prSt.setString(5,user.getLocation());
-        prSt.setString(6,user.getGender());
+            PreparedStatement prSt = getDbConnection().prepareStatement(inser);
+            prSt.setString(1, user.getFirstName());
+            prSt.setString(2, user.getLastName());
+            prSt.setString(3, user.getUserName());
+            prSt.setString(4, user.getPassword());
+            prSt.setString(5, user.getLocation());
+            prSt.setString(6, user.getGender());
 
             prSt.executeUpdate();
 
@@ -42,5 +39,22 @@ public class DatabaseHandler extends Configs {
             e.printStackTrace();
         }
     }
-// read write bd
+
+    // read write bd
+   public ResultSet getUser(User user) {
+        ResultSet resSet = null;
+        String select = "SELECT * FROM " + Const.USER_TABLE + " WHERE " +
+                Const.USERS_USERNAME + "=? AND " + Const.USERS_PASSWORD + "=?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            prSt.setString(1, user.getUserName());
+            prSt.setString(2, user.getPassword());
+            resSet = prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return resSet;
+    }
 }
