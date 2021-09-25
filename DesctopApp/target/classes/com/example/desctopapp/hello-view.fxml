@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desctopapp.HelloController">
+   <children>
+      <AnchorPane fx:id="" layoutY="104.0" prefHeight="296.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <PasswordField fx:id="password_field" layoutX="192.0" layoutY="129.0" prefHeight="24.0" prefWidth="300.0" promptText="Пароль" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="login_field" layoutX="192.0" layoutY="76.0" prefHeight="24.0" prefWidth="300.0" promptText="Логин" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="230.0" layoutY="14.0" prefHeight="44.0" prefWidth="225.0" text="Авторизация" textFill="#273e6beb">
+               <font>
+                  <Font name="FreeSans Bold" size="33.0" />
+               </font>
+            </Label>
+            <Button fx:id="authSignInButton" layoutX="287.0" layoutY="195.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="112.0" style="-fx-background-color: #2E3348;" text="Войти" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="314.0" layoutY="14.0" prefHeight="83.0" prefWidth="73.0" text="issy" textFill="#e8dcdc">
+         <font>
+            <Font name="Dyuthi Regular" size="50.0" />
+         </font>
+      </Label>
+      <Button fx:id="loginSignUpButton" layoutX="484.0" layoutY="14.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="202.0" style="-fx-background-color: #f39c63;" text="Зарегистрироваться " textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

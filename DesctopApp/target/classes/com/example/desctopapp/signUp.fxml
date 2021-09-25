@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desctopapp.SignUpController">
+    <children>
+        <AnchorPane fx:id="AnchorPane" layoutY="104.0" prefHeight="296.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
+            <children>
+                <PasswordField fx:id="password_field" layoutX="361.0" layoutY="83.0" prefHeight="24.0" prefWidth="300.0" promptText="Пароль" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </PasswordField>
+                <TextField fx:id="login_field" layoutX="30.0" layoutY="83.0" prefHeight="24.0" prefWidth="300.0" promptText="Логин" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="signUpButton" layoutX="226.0" layoutY="238.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="242.0" style="-fx-background-color: #2E3348;" text="Зарегестрироваться" textFill="WHITE">
+                    <font>
+                        <Font name="Dyuthi Regular" size="19.0" />
+                    </font>
+                </Button>
+            <TextField fx:id="signUpName" layoutX="30.0" layoutY="27.0" prefHeight="24.0" prefWidth="300.0" promptText="Имя" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="signUpLastName" layoutX="360.0" layoutY="27.0" prefHeight="24.0" prefWidth="300.0" promptText="Фамилия" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="signUpCountry" layoutX="197.0" layoutY="182.0" prefHeight="24.0" prefWidth="300.0" promptText="Страна" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <CheckBox fx:id="signUpCheckBoxMale" layoutX="235.0" layoutY="136.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" selected="true" text="Мужчина" />
+            <CheckBox fx:id="signUpCheckBoxFemale" layoutX="363.0" layoutY="136.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" text="Женщина" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="314.0" layoutY="14.0" prefHeight="83.0" prefWidth="73.0" text="issy" textFill="#e8dcdc">
+            <font>
+                <Font name="Dyuthi Regular" size="50.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

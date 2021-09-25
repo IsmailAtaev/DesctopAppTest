@@ -5,7 +5,6 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
 import com.example.desctopapp.animations.Shake;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
